@@ -73,6 +73,21 @@ The final selected models achieved an R² score of 0.8733, but their RMSE values
 
 This experiment helped me understand how regression models are evaluated and why comparing training, validation, and test results is important.
 
+
+## Portfolio Code and Reproducibility
+
+The scripts in this repository are **portfolio adaptations**, not exact copies of my submitted coursework. The tables above report results from the original lab, which compared 50 configurations for each task. The code below uses a smaller comparison of three kernels and may produce different metrics.
+
+- [SVC Python script](SVC/svc.py): HOG image features, stratified 5-fold model comparison, and final held-out testing.
+- [SVR Python script](SVR/svr.py): preprocessing within each training fold, 5-fold model comparison, and held-out testing.
+- [Python dependencies](requirements.txt): install using `pip install -r requirements.txt`.
+
+To run the SVC adaptation, place authorized PNG images in `data/FORK/`, `data/KNIFE/`, and `data/SPOON/`, then run `python SVC/svc.py --data data`.
+
+To run the SVR adaptation, obtain an authorized local copy of `car_prices.csv` and run `python SVR/svr.py --data car_prices.csv`.
+
+The original datasets and course instructions are not redistributed here. The SVC script has not been evaluated on the original image dataset in this portfolio version.
+
 ## Tools and Technologies
 
 - Python
